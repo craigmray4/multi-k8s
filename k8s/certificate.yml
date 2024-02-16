@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+     
+kind: Certificate
+metadata:
+  name: raycom-click-tls
+spec:
+  secretName: raycom-click
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: raycom.click
+  dnsNames:
+    - raycom.click
+    - www.raycom.click
